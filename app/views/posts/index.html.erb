@@ -11,6 +11,9 @@
   </thead>
 
   <tbody>
+    
+    <%=# @posts same instance from posts_controller and posts.each %>
+
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>

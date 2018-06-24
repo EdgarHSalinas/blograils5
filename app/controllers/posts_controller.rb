@@ -1,11 +1,23 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
+
+  
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.all # calls the Post.all method to load all post objcets
+    # stores them in an instance variable
+    render template: "posts/index.html.erb", layout: "application"
   end
+
+=begin
+When you access the list of all "Post" objects, the request gets sent to the "index" method of the "PostsController" class.
+Rails creates the source code for controller classes in the "app/controllers/" subdirectory.
+The "PostsController" class will be in "posts_controller.rb".
+The request is handled by the "index" method or action (controller methods that respond to requests are sometimes called "actions").
+=end
+
 
   # GET /posts/1
   # GET /posts/1.json
