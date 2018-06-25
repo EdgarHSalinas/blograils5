@@ -81,6 +81,6 @@ The request is handled by the "index" method or action (controller methods that 
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title)
+      params.require(:post).permit(:title, :body)
     end
 end
